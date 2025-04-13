@@ -7,18 +7,31 @@ import ProductsOne from "./sections/ProductsOne/ProductsOne"
 import Footer from "./sections/Footer/Footer"
 import Search from "./sections/Search/Search"
 
+import bolca1 from '../images/produtos/bolca_1.jpg'
+import bolca2 from '../images/produtos/bolca_2.jpg'
+import bolca3 from '../images/produtos/bolca_3.jpg'
+import bolca4 from '../images/produtos/bolca_4.jpg'
+import bolca5 from '../images/produtos/bolca_5.jpg'
+import bolca6 from '../images/produtos/bolca_6.jpg'
+import bolca7 from '../images/produtos/bolca_7.jpg'
+import bolca8 from '../images/produtos/bolca_8.jpg'
+
+import productsOne from '../images/productsOne.jpg'
+import productsTwo from '../images/productsTwo.jpg'
+
+
 const HomePage = () => {
     const produtos = [
-        { title: "Lunaria di Notte Firenze ", price: '2530', image: 'src/images/produtos/bolca_1.jpg' },
-        { title: "Bolca Marrom", price: '2080', image: 'src/images/produtos/bolca_6.jpg' },
-        { title: "Bolca Verde", price: '2390', image: 'src/images/produtos/bolca_3.jpg' },
-        { title: "Bolca Branca", price: '2090', image: 'src/images/produtos/bolca_4.jpg' },
+        { title: "Lunaria di Notte Firenze ", price: '2530', image:bolca1 },
+        { title: "Bolca Marrom", price: '2080', image: bolca6 },
+        { title: "Bolca Verde", price: '2390', image: bolca3 },
+        { title: "Bolca Branca", price: '2090', image: bolca4 },
     ]
     const produtosTwo = [
-        { title: "Bolca Verde", price: '2530', image: 'src/images/produtos/bolca_2.jpg' },
-        { title: "Bolca Azul", price: '2080', image: 'src/images/produtos/bolca_7.jpg' },
-        { title: "Bolca Preta", price: '2390', image: 'src/images/produtos/bolca_5.jpg' },
-        { title: "Bolca Laranja", price: '2090', image: 'src/images/produtos/bolca_8.jpg' },
+        { title: "Bolca Verde", price: '2530', image: bolca2},
+        { title: "Bolca Azul", price: '2080', image: bolca7 },
+        { title: "Bolca Preta", price: '2390', image: bolca5 },
+        { title: "Bolca Laranja", price: '2090', image: bolca8 },
     ]
     return (
         <div className="h-screen">
@@ -26,8 +39,8 @@ const HomePage = () => {
             <Search/>
             <Home />
             <Categorys />
-            <ProductsOne image={'src/images/productsOne.jpg'} title={'Bolcas sociais'} products={produtos} />
-            <ProductsOne image={'src/images/productsTwo.jpg'} title={'Bolcas de escritorio'} products={produtosTwo} />
+            <ProductsOne image={productsOne} title={'Bolcas sociais'} products={produtos} />
+            <ProductsOne image={productsTwo} title={'Bolcas de escritorio'} products={produtosTwo} />
             <Services/>
             <Consults/>
             <Footer/>

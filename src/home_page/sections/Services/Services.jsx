@@ -1,6 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import CardService from "./CardService";
 
+import presentes from '../../../images/presentes.png'
+import servicos from '../../../images/servicos.png'
+
 const Services = () => {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,12 +42,12 @@ const Services = () => {
           <CardService
             subTitle={"Contacte-nos"}
             title={"A arte de presentear"}
-            image={"src/images/presentes.png"}
+            image={presentes}
           />
           <CardService
             subTitle={"Explorar"}
             title={"Serviços"}
-            image={"src/images/servicos.png"}
+            image={servicos}
           />
           
           

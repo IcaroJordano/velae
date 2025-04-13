@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from '../../../images/logo.jpg'
 
 import { CiMenuBurger, CiUser, CiSearch, CiHeart} from "react-icons/ci";
 import Menu from "./Menu";
@@ -34,7 +35,7 @@ const Header = () => {
                 </button>
             </div>
             <div className=" overflow-hidden  left-1/2  h-13 lg:h-20 -translate-x-1/2 lg:-translate-x-3/12 absolute w-32 lg:w-64 ">
-                 <img className="scale-200 lg:mt-2  w-32 pb-4 lg:w-40 " src="src/images/logo.jpg" alt="" />
+                 <img className="scale-200 lg:mt-2  w-32 pb-4 lg:w-40 " src={logo} alt="" />
             </div>
             <div className="flex items-end me-3 lg:me-10">
                 <span className="cursor-pointer hidden lg:flex text-sm font-mono pt-1 m-3 my-auto">Fale Conosco</span>
