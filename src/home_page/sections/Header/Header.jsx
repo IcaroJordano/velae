@@ -3,9 +3,10 @@ import logo from '../../../images/logo.jpg'
 
 import { CiMenuBurger, CiUser, CiSearch, CiHeart} from "react-icons/ci";
 import Menu from "./Menu";
+import SearchPage from "../../../layout/SearchPage/SearchPage";
 
 
-const Header = () => {
+const Header = ({isOpen, setIsOpen}) => {
     const [isTop, setIsTop] = useState(true);
 
   useEffect(() => {
@@ -28,7 +29,12 @@ const Header = () => {
 
             <div className="flex my-auto font-mono ps-2 lg:ps-8 lg:text-sm items-end z-30">
                 <Menu/>
-                <button className="cursor-pointer flex items">
+                <button className="cursor-pointer flex items"
+                  onClick={ ()=>{
+                    setIsOpen(true)
+                    console.log(true)
+                  }}
+                >
 
                     <CiSearch className={` ${isTop?"h-6 ":"h-0 lg:h-6"}  transition-all duration-300 lg:text-xl  ms-1 my-auto`} />
                     <span className="ms-3   justify-baseline items-end hidden pt-2 lg:flex">Buscar</span>
@@ -42,6 +48,7 @@ const Header = () => {
         <CiHeart className="hidden lg:flex cursor-pointer  me-3 my-auto"/>
             <CiUser className="  my-auto cursor-pointer" />
             </div>
+            <SearchPage isOpen={isOpen} setIsOpen={setIsOpen}  />
         </header>
     )
 }
